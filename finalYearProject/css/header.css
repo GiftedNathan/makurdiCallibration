@@ -1,0 +1,87 @@
+
+.header{
+    background: linear-gradient(180deg, #333, #999);
+    box-shadow: 0px 5px 10px black; 
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.logo{
+    text-decoration: none;
+    font-size: 2.5em;
+    margin: 0 10px;
+    font-family: Impact, Haettenschweiler;
+    color: #000;
+}
+.title{
+    font-family: Helvetica;
+    font-size: 0.5em;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    float: right;
+    margin-right: 10px;
+}
+.menu li{
+    display: inline;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+.menu li a:hover{
+    box-shadow: 5px 5px 10px #000;
+    padding: 15px;
+    transition: 125ms;
+}
+.admin{
+    font-size: 0.9em;
+    color: #000;
+}
+label{
+    font-size: 2.3em;
+    float: right;
+    display: none;
+}
+#toggle{
+    display: none;
+    float: right;
+}
+
+
+@media only screen and (max-width: 768px){
+    label{
+        display: inline;
+        cursor: pointer;
+        margin-right: 10px;
+        color: white;
+    }
+    .menu{
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        background: linear-gradient(180deg, #333, #999);
+        box-shadow: 5px 5px 10px black;
+    }
+    .menu li{
+        display: block;
+        padding: 10px; 
+        border-bottom: 1px solid black;
+        display: none;
+    }
+    .menu li:hover{
+        background: #444;
+        box-shadow: 5px 5px 10px black;
+    }
+    .menu li a:hover{
+        box-shadow: none;
+    }
+    #toggle:checked + .menu li{
+        display: block;
+        transition: all 500ms;
+     }
+
+
+}
